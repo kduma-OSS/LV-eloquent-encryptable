@@ -25,4 +25,7 @@ A special thanks to [Jonathan Stavis](http://yottaram.com/blog/2014/10/24/encryp
 
 
 
+# Packagist
+View this package on Packagist.org: [kduma/eloquent-encryptable](https://packagist.org/packages/kduma/eloquent-encryptable)
+
 
