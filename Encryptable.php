@@ -1,5 +1,6 @@
 <?php namespace KDuma\Eloquent;
 
+use Illuminate\Contracts\Encryption\DecryptException;
 
 trait Encryptable {
 
