@@ -2,8 +2,16 @@
 
 use Illuminate\Contracts\Encryption\DecryptException;
 
+/**
+ * Class Encryptable
+ * @package KDuma\Eloquent
+ */
 trait Encryptable {
 
+    /**
+     * @param $key
+     * @return mixed
+     */
     public function getAttribute($key)
     {
         try {
@@ -18,6 +26,10 @@ trait Encryptable {
         }
     }
 
+    /**
+     * @param $key
+     * @param $value
+     */
     public function setAttribute($key, $value)
     {
         if (array_key_exists($key, array_flip($this->encrypted))) {
