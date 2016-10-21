@@ -1,13 +1,14 @@
-<?php namespace KDuma\Eloquent;
+<?php
+
+namespace KDuma\Eloquent;
 
 use Illuminate\Contracts\Encryption\DecryptException;
 
 /**
- * Class Encryptable
- * @package KDuma\Eloquent
+ * Class Encryptable.
  */
-trait Encryptable {
-
+trait Encryptable
+{
     /**
      * @param $key
      * @return mixed
@@ -15,13 +16,12 @@ trait Encryptable {
     public function getAttribute($key)
     {
         try {
-            if (array_key_exists($key, array_flip($this->encrypted)))
-            {
+            if (array_key_exists($key, array_flip($this->encrypted))) {
                 return \Crypt::decrypt(parent::getAttribute($key));
             }
 
             return parent::getAttribute($key);
-        }catch (DecryptException $e){
+        } catch (DecryptException $e) {
             return parent::getAttribute($key);
         }
     }
@@ -34,6 +34,7 @@ trait Encryptable {
     {
         if (array_key_exists($key, array_flip($this->encrypted))) {
             parent::setAttribute($key, \Crypt::encrypt($value));
+
             return;
         }
 
