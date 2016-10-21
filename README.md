@@ -4,6 +4,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/kduma/eloquent-encryptable/v/unstable.svg)](https://packagist.org/packages/kduma/eloquent-encryptable) 
 [![License](https://poser.pugx.org/kduma/eloquent-encryptable/license.svg)](https://packagist.org/packages/kduma/eloquent-encryptable)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/b2497ffc-f575-4eb0-b04a-23072c54a552/mini.png)](https://insight.sensiolabs.com/projects/b2497ffc-f575-4eb0-b04a-23072c54a552)
+[![StyleCI](https://styleci.io/repos/30102958/shield?branch=master)](https://styleci.io/repos/30102958)
 
 Adds possibility to encrypt fields in Laravel Eloquent models.
 
