@@ -15,15 +15,15 @@ trait Encryptable
      */
     public function getAttribute($key)
     {
+        $value = parent::getAttribute($key);
+        
         try {
             if (array_key_exists($key, array_flip($this->encrypted))) {
-                return \Crypt::decrypt(parent::getAttribute($key));
+                $value = \Crypt::decrypt($value));
             }
-
-            return parent::getAttribute($key);
-        } catch (DecryptException $e) {
-            return parent::getAttribute($key);
-        }
+        } catch (DecryptException $e) {}
+        
+        return $value;
     }
 
     /**
@@ -33,11 +33,9 @@ trait Encryptable
     public function setAttribute($key, $value)
     {
         if (array_key_exists($key, array_flip($this->encrypted))) {
-            parent::setAttribute($key, \Crypt::encrypt($value));
-
-            return;
+            $value = \Crypt::encrypt($value)
         }
 
-        parent::setAttribute($key, $value);
+        return parent::setAttribute($key, $value);
     }
 }
