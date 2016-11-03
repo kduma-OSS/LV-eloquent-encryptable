@@ -16,14 +16,14 @@ trait Encryptable
     public function getAttribute($key)
     {
         $value = parent::getAttribute($key);
-        
+
         try {
             if (array_key_exists($key, array_flip($this->encrypted))) {
                 $value = \Crypt::decrypt($value);
             }
         } catch (DecryptException $e) {
         }
-        
+
         return $value;
     }
 
