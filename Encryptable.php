@@ -3,6 +3,7 @@
 namespace KDuma\Eloquent;
 
 use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
 
 /**
  * Class Encryptable.
@@ -19,7 +20,7 @@ trait Encryptable
 
         try {
             if (array_key_exists($key, array_flip($this->encrypted))) {
-                $value = \Crypt::decrypt($value);
+                $value = Crypt::decrypt($value);
             }
         } catch (DecryptException $e) {
         }
@@ -34,7 +35,7 @@ trait Encryptable
     public function setAttribute($key, $value)
     {
         if (array_key_exists($key, array_flip($this->encrypted))) {
-            $value = \Crypt::encrypt($value);
+            $value = Crypt::encrypt($value);
         }
 
         return parent::setAttribute($key, $value);
