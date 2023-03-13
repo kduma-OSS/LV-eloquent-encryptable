@@ -1,7 +1,13 @@
 {
   "name": "kduma/eloquent-encryptable",
   "description": "Adds possibility to encrypt fields in Laravel Eloquent models.",
-  "keywords": ["laravel", "eloquent", "encrypt", "encode", "crypt"],
+  "keywords": [
+    "laravel",
+    "eloquent",
+    "encrypt",
+    "encode",
+    "crypt"
+  ],
   "license": "MIT",
   "authors": [
     {
