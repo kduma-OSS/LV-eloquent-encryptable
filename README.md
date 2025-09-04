@@ -8,6 +8,7 @@
 
 Adds possibility to encrypt fields in Laravel Eloquent models.
 
+Check full documentation here: [opensource.duma.sh/libraries/php/eloquent-encryptable](https://opensource.duma.sh/libraries/php/eloquent-encryptable)
 
 # Setup
 Add the package to the require section of your composer.json and run `composer update`
