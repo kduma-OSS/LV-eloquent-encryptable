@@ -1,3 +1,18 @@
+# Package EOL
+
+> **This package is deprecated and no longer maintained.**
+>
+> Since Laravel 8, the framework includes built-in [encrypted casts](https://laravel.com/docs/eloquent-mutators#encrypted-casting) which provide the same functionality natively:
+> ```php
+> protected $casts = [
+>     'secret_field' => 'encrypted',
+>     'secret_array' => 'encrypted:array',
+> ];
+> ```
+> The built-in solution offers better type support, integration with the cast system, and is actively maintained as part of the framework. Please migrate to native encrypted casts.
+
+---
+
 # L5-eloquent-encryptable
 [![Latest Stable Version](https://poser.pugx.org/kduma/eloquent-encryptable/v/stable.svg)](https://packagist.org/packages/kduma/eloquent-encryptable) 
 [![Total Downloads](https://poser.pugx.org/kduma/eloquent-encryptable/downloads.svg)](https://packagist.org/packages/kduma/eloquent-encryptable) 
@@ -8,7 +23,7 @@
 
 Adds possibility to encrypt fields in Laravel Eloquent models.
 
-Check full documentation here: [opensource.duma.sh/libraries/php/eloquent-encryptable](https://opensource.duma.sh/libraries/php/eloquent-encryptable)
+Check full documentation here: [opensource.duma.sh/libraries/deprecated/eloquent-encryptable](https://opensource.duma.sh/libraries/deprecated/eloquent-encryptable)
 
 # Setup
 Add the package to the require section of your composer.json and run `composer update`
